@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html>
+<head>
+<script type="text/JavaScript" src="jquery-1.3.2.js"></script> </head>
+<body>
+<div>old content</div>
+
+
+<div>old content</div> <div>old content</div> <div>old content</div>
+<a href='#'>link</a>
+
+<form>
+<input name="" type="checkbox" /> 
+<input name="" type="radio" /> 
+<input name="" type="text" /> 
+<input name="" type="button" /> 
+</form>
+
+<form>
+<input name="" type="checkbox" /> 
+<input name="" type="radio" /> 
+<input name="" type="text" /> 
+<input name="" type="button" /> 
+</form>
+<input name="" type="checkbox" /> 
+<input name="" type="radio" /> 
+<input name="" type="text" /> 
+<input name="" type="button" />
+
+ <script>
+//hide all divs on the page
+jQuery('div').hide().text('new content').addClass("updatedContent").show();
+
+alert('Page contains ' + jQuery(document.getElementsByTagName('a')).length + ' <a> Elements, And has a ' + jQuery(document.body).attr('bgcolor') + ' background');
+//searches within all form elements, using a wrapper for context, alerts "8 inputs" 
+alert('selected ' + jQuery('input',$('form')).length + ' inputs');
+//search with the first form element, using DOM reference as the context, alerts
+//"4 inputs"
+alert('selected' + jQuery('input',document.forms[0]).length + ' inputs');
+//search within the body element for all input elements using an expression, //alerts "12 inputs"
+alert('selected' + jQuery('input','body').length + ' inputs');
+
+
+
+</script>
+</head>
+<body>
+<p>The DOM is ready!</p> </body>
+
+</script> </body> </html>

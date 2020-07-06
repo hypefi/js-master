@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head>
+<body>
+<div> 
+ <ul id="c"> 
+  <li>list</li>
+  <li>list</li>
+  <li>list</li> 
+  <li>list</li>
+ </ul> </div>
+
+
+ <h3>Anchors</h3>
+<a href='#' class='remove'>Anchor Element</a>
+<a href='#' class='remove'>Anchor Element</a>
+<a href='#'>Anchor Element</a>
+
+<ul id="b"></ul>
+
+
+<script type="text/JavaScript" src="jquery-1.3.2.js"></script>
+<script type="text/JavaScript">
+
+jQuery('<p><a>jQuery</a></p>').find('a').attr('href','http://www.jquery.com').end().appendTo('body');
+
+jQuery('a').remove('.remove');
+
+
+jQuery('ul#c li')
+.click(function(){alert('List Item Clicked')}) 
+.parent()
+.clone(true) 
+.find('li')
+.appendTo('#b') 
+.end()
+.end()
+.end()
+.remove();
+
+
+jQuery('p').text('Hello World, I am a <p> element.'); 
+alert(jQuery('p').text());
+
+(function($){ 
+//function to create private scope with $ parameter //private scope and using $ without worry of conflict
+
+
+
+
+})(jQuery); //invoke nameless function and pass it the jQuery object
+
+
+//jQuery('div').find('p').css('border','1px solid #993300');
+</script>
+</body>
+</html>

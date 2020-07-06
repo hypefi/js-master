@@ -1,0 +1,9 @@
+<script>
+
+
+addEventListener("message", event => { postMessage(event.data * event.data);
+});
+
+let squareWorker = new Worker("code/squareworker.js"); 
+
+ </script>

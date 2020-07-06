@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head>
+<body>
+<div id="post"> 
+
+<a  href="/category">Category</a> 
+
+<ul id="nav">
+
+<li><a href="#anchor1">Anchor 1</a></li>
+<li><a href="#anchor2">Anchor 2</a></li>
+<li><span><a href="#anchor3">Anchor 3</a></span></li>
+</ul>
+
+</div> 
+<button> Select to color </button>
+
+
+<script type="text/JavaScript" src="jquery-1.3.2.js"></script>
+<script type="text/JavaScript">
+
+var urls = [];
+$("div#post a[href]").each(
+	function(i) {
+    urls[i] = $(this).attr('href'); 
+
+});
+
+console.log(urls);
+alert(urls.join(","));
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+jQuery('#button1').click(function(e){ jQuery('div.panel').hide(); jQuery('#panel1').show();
+jQuery('#desc').text('You clicked the red button');
+});
+jQuery('#button2').click(function(e){ jQuery('div.panel').hide(); jQuery('#panel2').show();
+jQuery('#desc').text('You clicked the blue button');
+});
+jQuery('#button3').click(function(e){ jQuery('div.panel').hide();
+jQuery('#panel3').show();
+jQuery('#desc').text('You clicked the green button');
+});

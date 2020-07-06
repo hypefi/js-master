@@ -1,0 +1,11 @@
+
+
+
+
+<input type="text"> length: <span id="length">0</span> 
+<script>
+let text = document.querySelector("input");
+let output = document.querySelector("#length"); text.addEventListener("input", () => {
+     output.textContent = text.value.length;
+   });
+</script>

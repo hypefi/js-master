@@ -1,0 +1,39 @@
+ <button>A</button>
+ <button>B</button>
+ <button>C</button>
+
+
+ <script>
+document.body.addEventListener("click", event => { if (event.target.nodeName == "BUTTON") {
+console.log("Clicked", event.target.textContent); }
+   });
+ </script>
+
+
+<a href="https://developer.mozilla.org/">MDN</a> 
+<script>
+let link = document.querySelector("a"); link.addEventListener("click", event => {
+console.log("Nope.");
+     event.preventDefault();
+   });
+</script>
+
+ <p>This page turns violet when you hold the V key.</p>
+
+ <script>
+window.addEventListener("keydown", event => { if (event.key == "v") {
+document.body.style.background = "violet"; }
+});
+window.addEventListener("keyup", event => {
+if (event.key == "v") { document.body.style.background = "";
+} });
+</script>
+
+
+<p>Press Control-Space to continue.</p>
+ <script>
+window.addEventListener("keydown", event => { if (event.key == " " && event.ctrlKey) {
+console.log("Continuing!"); }
+  });
+</script>
+
